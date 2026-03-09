@@ -30,6 +30,11 @@ async def on_ready():
 @bot.command()
 async def hello(ctx):
     await ctx.send(f'Olá! eu sou um bot {bot.user.name}!')
+    
+@bot.command()
+async def add(ctx, left: int, right: int):
+    """Adds two numbers together."""
+    await ctx.send(left + right)
 
 @bot.command()
 async def heh(ctx, count_heh = 5):
